@@ -1,23 +1,11 @@
 pipeline {
-    agent {
-        label 'linux'
-    }    
+    agent { label 'linux' }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Starting build...'
-                sh 'echo Building application'
+                sh 'echo Running on Linux'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Build completed successfully.'
-        }
-        failure {
-            echo 'Build failed.'
         }
     }
 }
